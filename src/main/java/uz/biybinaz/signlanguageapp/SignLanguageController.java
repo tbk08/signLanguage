@@ -1,27 +1,25 @@
 package uz.biybinaz.signlanguageapp;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class SignLanguageController {
-    @FXML
-    ImageView myImageView;
-    @FXML
-    Button myButton;
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
-    public void initialize() throws FileNotFoundException {
-        FileInputStream inputstream = new FileInputStream("C:\\Users\\User\\IdeaProjects\\demo7\\src\\main\\java\\com\\example\\demo7\\aSign.png");
-        Image myImage = new Image(inputstream);
-        myImageView.setImage(myImage);
+    public void showAllLetters(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("letters-view.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
-    public void printLetter(ActionEvent e) {
-        System.out.println("A");
-    }
 }

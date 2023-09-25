@@ -11,11 +11,8 @@ import java.io.IOException;
 public class SignLanguageApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        //toDo изменить получение пути к файлу
-        Parent fxmlLoader = FXMLLoader.load(SignLanguageApplication.class.getResource("sign-view.fxml"));
+        Parent fxmlLoader = FXMLLoader.load(getClass().getResource("sign-view.fxml"));
         Scene scene = new Scene(fxmlLoader);
-
-        stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
     }
