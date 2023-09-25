@@ -17,9 +17,9 @@
         </Label>
         <ImageView fx:id="aSignImage" fitHeight="228.0" fitWidth="334.0" layoutX="133.0" layoutY="45.0"
                    onDragDetected="#aSign" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../../../signImages/aSign.png"/>
-            </image>
+<!--            <image>-->
+<!--                <Image url="@../../../signImages/aSign.png"/>-->
+<!--            </image>-->
         </ImageView>
         <Button fx:id="back" layoutX="504.0" layoutY="22.0" mnemonicParsing="false" onAction="#backToMenu"
                 prefHeight="42.0" prefWidth="81.0" text="Back">
